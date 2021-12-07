@@ -1,8 +1,10 @@
 import * as cdk from "@aws-cdk/core";
 import { Vpc, SubnetType } from "@aws-cdk/aws-ec2";
 import * as dotenv from "dotenv";
+import * as path from "path";
 
-dotenv.config({ path: "../.env" });
+const envPath = path.resolve(".env");
+dotenv.config({ path: envPath });
 
 export class AwsSiteVpnStack extends cdk.Stack {
     constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
