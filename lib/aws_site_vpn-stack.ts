@@ -15,7 +15,7 @@ export class AwsSiteVpnStack extends cdk.Stack {
 
         new Vpc(this, "vpn_vpc", {
             cidr: "10.0.0.0/16",
-            maxAzs: 2,
+            maxAzs: 1,
             subnetConfiguration: [
                 {
                     cidrMask: 24,
